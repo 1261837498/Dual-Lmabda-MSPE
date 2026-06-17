@@ -1,0 +1,13 @@
+name: dtv
+
+cplexpath: null  # null/None uses PuLP on macro
+
+no_cuda: true  # Disables CUDA training
+
+test_episodes: 10 # Number of episodes to test agent
+
+horizon: 1
+
+directory: "saved_files"
+
+wandb: false

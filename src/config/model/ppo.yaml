@@ -1,0 +1,41 @@
+name: ppo
+
+agent_name: "PPO_GNN"
+
+cplexpath: null
+directory: "saved_files"
+checkpoint_path: "PPO_GNN_${simulator.city}"
+
+max_episodes: 10000
+no_cuda: false
+batch_size: 64
+minibatch_size: 64
+p_lr: 1e-4
+q_lr: 1e-3
+hidden_size: 256
+clip: 10.0
+rew_scale: 0.01
+input_size: 13
+test_episodes: 10
+wandb: false
+
+gamma: 0.99
+gae_lambda: 0.95
+clip_ratio: 0.2
+ppo_epochs: 4
+entropy_coef: 0.01
+value_coef: 0.5
+safe_actor: true
+
+# Fair pure-RL baseline defaults.
+use_LSTM: false
+conservative: false
+use_shadow_price: false
+use_learned_shadow: false
+use_sp_dispatch: false
+use_sp_reb: false
+use_teacher_distill: false
+heuristic_horizon: 6
+use_multi_scale_pressure_encoder: false
+use_service_pressure_encoder: false
+use_regime_aware: false

@@ -1,0 +1,42 @@
+name: td3
+
+agent_name: "TD3_GNN"
+
+cplexpath: null
+directory: "saved_files"
+checkpoint_path: "TD3_GNN_${simulator.city}"
+
+max_episodes: 10000
+no_cuda: false
+batch_size: 100
+p_lr: 1e-4
+q_lr: 1e-3
+hidden_size: 256
+clip: 10.0
+rew_scale: 0.01
+input_size: 13
+test_episodes: 10
+wandb: false
+
+gamma: 0.99
+polyak: 0.995
+policy_delay: 2
+target_noise: 0.2
+noise_clip: 0.5
+expl_noise: 0.1
+update_after: 100
+replay_size: 100000
+safe_actor: true
+
+# Fair pure-RL baseline defaults.
+use_LSTM: false
+conservative: false
+use_shadow_price: false
+use_learned_shadow: false
+use_sp_dispatch: false
+use_sp_reb: false
+use_teacher_distill: false
+heuristic_horizon: 6
+use_multi_scale_pressure_encoder: false
+use_service_pressure_encoder: false
+use_regime_aware: false
